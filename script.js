@@ -8,3 +8,18 @@ const progressContainer = document.querySelector('.progress-container');
 const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
+// Song Titles
+const songs = ['beach', 'night', 'road'];
+
+// Keep track of songs
+let songIndex = 0;
+
+//Initially load song info DOM
+loadSong(songs[songIndex]);
+
+// Update song details
+function loadSong(song) {
+    title.innerText = song
+    audio.src = `music/${song}.mp3`
+    cover.src = `img/${song}.jpg`
+}
